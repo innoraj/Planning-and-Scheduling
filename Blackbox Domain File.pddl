@@ -1,0 +1,13 @@
+﻿(define (domain blackbox planner)
+(:requirements :strips)
+(:predicates (on ?x ?y?z)
+	(clear ?x))
+
+(:action move :parameters (?x ?z)
+	:precondition (and (Location ?x) (Location ?z)
+			(not inaccesible))
+	:effect	((move nort, south, east, west) (not (Location ?z))
+(:action move :parameters (?y?z)
+	:precondition (and (Location ?y) (Location ?z)
+			(not inaccesible))
+	:effect	((move nort, south, east, west) (not (Location ?z))
